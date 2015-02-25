@@ -23,27 +23,21 @@
         position: relative;
         top: 105px;
         text-decoration: underline;
-      }
-
-      i {
-        position: relative;
-        top: 40px;
-        left: 37px;
-        font-size: $base-font-size * 1.5;
-        color: $green;
+        width: 100%;
       }
 
       &:before {
         @extend .white-box;
 
-        content: "\00A0";
+        content: "\002b";
         height: 100px;
         position: absolute;
         width: 80%;
         margin-left: 10%;
         padding: 25%;
-        font-size: $base-font-size * 1.8;
+        font-size: $base-font-size * 2.2;
         text-align: center;
+        color: $green;
       }
     }
   }
