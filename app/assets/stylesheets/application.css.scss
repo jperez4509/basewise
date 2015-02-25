@@ -1,3 +1,20 @@
+@charset "UTF-8";
+
+// Apply CSS reset
+@import "shared/normalize";
+
+// Bourbon, Neat, and Bitters framework
 @import "bourbon";
-@import "neat";
 @import "base/base";
+@import "neat";
+@import "font-awesome";
+
+// Shared Styles
+@import "shared/navigation";
+@import "shared/mixins";
+
+// Layout
+@import "application/layout";
+
+// Page Specific Styling
+@import "application/projects";

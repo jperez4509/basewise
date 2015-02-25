@@ -1,0 +1,81 @@
+.white-box {
+  @include box-shadow(1px, 1px, 0.5em, rgba(0, 0, 0, 0.3));
+  @include border-radius(3px);
+
+  background-color: $white;
+}
+
+.projects-container {
+  @include span-columns(8 of 12);
+  @include shift(2 of 12);
+
+  margin-top: 50px;
+
+  .projects-sidebar {
+    @include span-columns(1 of 8);
+
+    margin-top: 30px;
+
+    a {
+      position: relative;
+
+      span {
+        position: relative;
+        top: 105px;
+        text-decoration: underline;
+      }
+
+      i {
+        position: relative;
+        top: 40px;
+        left: 37px;
+        font-size: $base-font-size * 1.5;
+        color: $green;
+      }
+
+      &:before {
+        @extend .white-box;
+
+        content: "\00A0";
+        height: 100px;
+        position: absolute;
+        width: 80%;
+        margin-left: 10%;
+        padding: 25%;
+        font-size: $base-font-size * 1.8;
+        text-align: center;
+      }
+    }
+  }
+
+  ol.projects-list {
+    @include span-columns(7 of 8);
+
+    li {
+      @extend .white-box;
+      @include span-columns(2.32 of 7);
+      @include omega(3n);
+
+      height: 250px;
+      margin-top: 30px;
+      padding: 10px;
+
+      span.title {
+        font-size: $base-font-size * 1.4;
+        font-weight: 700;
+        display: block;
+      }
+
+      span.description {
+        color: darken($base-background-color, 30);
+        display: block;
+      }
+
+      span.updated {
+        color: darken($base-background-color, 30);
+        font-size: $base-font-size * 0.8;
+      }
+    }
+  }
+}
+
