@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+
   # Registration
-  get "register" => "registrations#new", as: "new_registration"
-  post "register" => "registrations#create", as: "create_registration"
+  get "register" => "register#new", as: "register"
+  post "register" => "register#create", as: "new_registration"
+  resources :register, only: [:create, :new]
 
   # Projects
   resources :projects
 
   # Users
-  resources :users
+  #resources :users
 end
