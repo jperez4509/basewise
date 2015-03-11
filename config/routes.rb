@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-
-  get 'session/create'
-
-  get 'session/destroy'
-
-  get 'session/new'
-
   #Session
   get "signin" => "session#new", as: "signin"
   post "login" => "session#create", as: "login"

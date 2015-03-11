@@ -1,9 +1,8 @@
 <nav>
   <ul class="left">
-    <li>Basewise: Your Name</li>
+    <li>Basewise:<%= user_name(current_user)%></li>
   </ul>
 
   <ul class="right">
-    <li>Log Out</li>
+    <li><%= session_links(current_user) %></li>
   </ul>
-</nav>

@@ -13,9 +13,10 @@ class SessionController < ApplicationController
   end
 
   def destroy
+    logout_user
 
+    redirect_to signin_path
   end
-
   def new
     @user = User.new
   end
